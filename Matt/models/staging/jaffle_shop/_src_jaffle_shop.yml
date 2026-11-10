@@ -5,8 +5,4 @@ sources:
     tables:
       - name: customers
       - name: orders
-  - name: stripe
-    database: raw
-    schema: jaffle_shop
-    tables:
-      - name: payments
+
