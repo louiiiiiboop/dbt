@@ -10,7 +10,7 @@ orders as (
 
 ),
 
-amount as (select * from {{ ref('fct_orders') }}  ),
+amount as (select * from {{ ref('stg_stripe__payments') }}  ),
 
 
 customer_orders as (
@@ -20,7 +20,7 @@ customer_orders as (
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(orders.order_id) as number_of_orders,
-        sum(amount) as lifetime_value
+        sum(case when amount.status = 'success' then amount end) as lifetime_value
         
 
     from orders
