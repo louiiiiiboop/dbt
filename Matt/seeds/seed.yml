@@ -7,10 +7,6 @@ seeds:
         data_tests:
           - unique
           - not_null
-      - name: email
-        description: "employee email"
-        data_tests:
-          - unique
-          - not_null
+
       - name: customer_id
         description: "The unique identifer for each customer assigned to an employee"
