@@ -1,0 +1,10 @@
+macros:
+  - name: cents_to_dollars
+    description: A mcro that converst dollars to cents
+    arguments:
+      - name: column_name
+        type: string
+        description: The name of the column you want to convert
+      - name: decimals
+        type: integer
+        description: number of decimal places, default 2

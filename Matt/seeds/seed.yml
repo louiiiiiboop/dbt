@@ -13,5 +13,6 @@ seeds:
           - unique
           - not_null
 
+
       - name: customer_id
         description: "The unique identifer for each customer assigned to an employee"
